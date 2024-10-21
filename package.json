@@ -4,10 +4,10 @@
     "type": "module",
     "scripts": {
         "build": "bun build index.ts --outdir ./dist --target node",
-        "install": "npm i && npx playwright install"
+        "install": "npm i && npx playwright install",
+        "cli": "node index.js"
     },
     "devDependencies": {
-        "@types/bun": "latest",
         "@types/fluent-ffmpeg": "^2.1.26"
     },
     "peerDependencies": {

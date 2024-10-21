@@ -18,8 +18,14 @@ Or to skip both operations:
 npm run install
 ```
 
+To build:
+
+```bash
+tsc
+```
+
 To run:
 
 ```bash
-node .\dist\index.js --url <URL> --output "video.mp4"
+npm run cli
 ```

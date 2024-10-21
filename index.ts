@@ -37,24 +37,28 @@ function downloadM3U8Video(m3u8Url: string, outputFile: string): void {
         .run();
 }
 
-const program = new Command();
+async function main() {
+    const program = new Command();
 
-program
-    .name("BlueSky Video Downloader")
-    .description("A script to download videos from bsky")
-    .version("1.0.0")
-    .requiredOption("-u --url <url>", "Video URL")
-    .option(
-        "-o, --output <file>",
-        "Output file name for the downloaded video",
-        "output.mp4",
-    );
+    program
+        .name("BlueSky Video Downloader")
+        .description("A script to download videos from bsky")
+        .version("1.0.0")
+        .requiredOption("-u --url <url>", "Video URL")
+        .option(
+            "-o, --output <file>",
+            "Output file name for the downloaded video",
+            "output.mp4",
+        );
 
-program.parse();
+    program.parse();
 
-const options = program.opts();
+    const options = program.opts();
 
-const m3u8Url = await fetchM3U8Url(options.url);
-if (m3u8Url) {
-    downloadM3U8Video(m3u8Url, options.output);
+    const m3u8Url = await fetchM3U8Url(options.url);
+    if (m3u8Url) {
+        downloadM3U8Video(m3u8Url, options.output);
+    }
 }
+
+main();
