@@ -3,11 +3,17 @@
 To install dependencies:
 
 ```bash
-bun install
+npm i && npm i playwright
+```
+
+To install playwright browsers
+
+```bash
+npx playwright install
 ```
 
 To run:
 
 ```bash
-bun run index.ts
+node .\dist\index.js --url <URL> --output "video.mp4"
 ```
