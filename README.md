@@ -1,4 +1,4 @@
-# bskyvid
+# BlueSky Video Download
 
 To install dependencies:
 
@@ -27,5 +27,5 @@ tsc
 To run:
 
 ```bash
-npm run cli
+node index.js --url "<URL>" --output "video.mp4"
 ```
