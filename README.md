@@ -12,6 +12,12 @@ To install playwright browsers
 npx playwright install
 ```
 
+Or to skip both operations:
+
+```bash
+npm run install
+```
+
 To run:
 
 ```bash
