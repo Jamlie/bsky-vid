@@ -3,9 +3,8 @@
     "module": "index.ts",
     "type": "module",
     "scripts": {
-        "build": "bun build index.ts --outdir ./dist --target node",
-        "make": "npm i && npx playwright install",
-        "cli": "node index.js"
+        "build": "tsc",
+        "make": "npm i && npx playwright install"
     },
     "devDependencies": {
         "@types/fluent-ffmpeg": "^2.1.26"
